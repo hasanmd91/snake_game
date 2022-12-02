@@ -13,10 +13,15 @@ let tilesize = canvas.width / tiltcount - 2; // drwing snake inside of this tile
 let Xvelocity = 0;
 let Yvelocity = 0;
 
+let applex = 5;
+let appley = 5;
+
 // game loop
 const drawGame = () => {
   clearScreen();
   changeSnakePosition();
+  checkAppleCollision();
+  drawApple();
   drawSnake();
   setTimeout(drawGame, 1000 / speed);
 };
@@ -35,14 +40,30 @@ const drawSnake = () => {
   ctx.fillRect(headx * tiltcount, heady * tiltcount, tilesize, tilesize);
 };
 
+// change the snake position
+
 const changeSnakePosition = () => {
   headx = headx + Xvelocity;
   heady = heady + Yvelocity;
-  console.log(" i called changeSnakePosition");
+};
+
+// drawing apple
+
+const drawApple = () => {
+  ctx.fillStyle = "red";
+  ctx.fillRect(applex * tiltcount, appley * tiltcount, tilesize, tilesize);
+};
+
+// check apple and snake collision
+
+const checkAppleCollision = () => {
+  if (applex === headx && appley === heady) {
+    applex = Math.floor(Math.random() * tiltcount);
+    appley = Math.floor(Math.random() * tiltcount);
+  }
 };
 
 const keyDown = (event) => {
-  console.log("i called keydown");
   //up
   if (event.keyCode === 38) {
     if (Yvelocity == 1) return;
