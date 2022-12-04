@@ -1,6 +1,6 @@
 # Snake Game
 
-- Game starts by pressing an arrow key
+- Game starts by pressing any arrow key
 - Speed will increase as the score increases
 - Getting a red apple will increase the snake's length
 
