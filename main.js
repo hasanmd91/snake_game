@@ -31,6 +31,16 @@ const drawGame = () => {
   let result = gameOver();
   if (result === true) return;
 
+  if (score > 5) {
+    speed = 9;
+  } else if (score > 10) {
+    speed = 11;
+  } else if (score > 15) {
+    speed = 13;
+  } else if (score > 20) {
+    speed = 15;
+  }
+
   clearScreen();
   checkAppleCollision();
   drawApple();
