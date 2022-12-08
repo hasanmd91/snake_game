@@ -12,7 +12,7 @@
 
 ## Setup and usage
 
-Live page [https://hasanmd91.github.io/snake_game/]()
+Live page [](https://hasanmd91.github.io/snake_game/)
 
 ## Screenshot
 
@@ -23,4 +23,4 @@ Live page [https://hasanmd91.github.io/snake_game/]()
 
 ## Sources
 
-- [https://github.com/hasanmd91/snake_game]()
+- [](https://github.com/hasanmd91/snake_game)
